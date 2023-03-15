@@ -1,14 +1,12 @@
 import './AddonCard.css';
-const AddonCard = ({ label, descr, price, duration, isActive, onChange }) => {
+const AddonCard = ({ label, descr, price, duration, isActive, onSelected }) => {
 
-  const style = `checkbox-container block relative border p-4 flex items-center justify-between gap-x-8 rounded-lg cursor-pointer w-[416px] focus-within:ring focus-within:ring-blue-900 ${isActive ? 'border-purple bg-lightblue' : ''}`
+  const style = `checkbox-container block relative border p-4 flex items-center justify-between gap-x-8 rounded-lg cursor-pointer transition-all hover:border-purple focus-within:ring-1 focus-within:ring-blue-900 ${isActive ? 'border-purple bg-lightblue' : ''}`
 
   return (
     <label className={style}>
-
-      <input onChange={onChange} type="checkbox" checked={isActive} />
+      <input onChange={onSelected} type="checkbox" checked={isActive} />
       <span className="checkmark"></span>
-
       <div className="flex-grow">
         <h4 className="text-blue-600 font-bold">{label}</h4>
         <p className="text-sm text-gray-400">{descr}</p>

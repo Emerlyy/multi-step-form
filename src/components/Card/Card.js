@@ -1,6 +1,6 @@
 const Card = ({ label, price, img, isActive, freeCount, onClick, duration }) => {
 
-  const style = `border-2 flex flex-col px-3 py-4 rounded-lg items-start justify-between gap-y-8 cursor-pointer w-32 ${isActive ? 'border-purple bg-lightblue' : ''}`
+  const style = `border-2 flex flex-col px-3 py-4 rounded-lg items-start justify-between gap-y-10 cursor-pointer w-[132px] transition-all hover:border-purple ${isActive ? 'border-purple bg-lightblue' : ''}`
 
   return (
     <div className={style} onClick={onClick}>

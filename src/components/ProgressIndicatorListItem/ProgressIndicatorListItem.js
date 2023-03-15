@@ -1,6 +1,8 @@
-const ProgressIndicatorListItem = ({ step, label, active }) => {
+import { memo } from "react";
 
-  let style = "rounded-full font-medium flex-shrink-0 h-8 w-8 flex items-center justify-center border border-white";
+const ProgressIndicatorListItem = memo(({ step, label, active }) => {
+
+  let style = "rounded-full font-medium flex-shrink-0 h-8 w-8 flex items-center justify-center border border-white transition-all";
 
   style += active ? ' text-blue-600 bg-blue-100 border-none' : ' text-white';
 
@@ -13,6 +15,6 @@ const ProgressIndicatorListItem = ({ step, label, active }) => {
       </div>
     </div>
   )
-}
+})
 
 export default ProgressIndicatorListItem;
