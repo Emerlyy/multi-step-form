@@ -3,7 +3,7 @@ import Card from '../Card/Card';
 
 const PlanSelector = ({ plans, activePlan, onPlanChange, isYearly }) => {
   return (
-    <div className="flex gap-x-4 justify-evenly">
+    <div className="flex flex-col flex-wrap gap-y-4 md:flex-row md:gap-x-4 md:justify-evenly">
       {
         plans.map((plan) => {
           const {

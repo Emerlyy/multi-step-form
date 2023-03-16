@@ -28,7 +28,13 @@
 }
 
 .progress{
-  background-image: url('../public/images/bg-sidebar-desktop.svg');
+  background-image: url('../public/images/bg-sidebar-mobile.svg');
+}
+
+@media(min-width: 640px){
+  .progress{
+    background-image: url('../public/images/bg-sidebar-desktop.svg');
+  }
 }
 
 body {

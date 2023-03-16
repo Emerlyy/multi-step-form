@@ -23,7 +23,7 @@ const FormInput = ({ value, onChange, onBlur, inputValid, isDirty, errorMessage,
 }
 
 const Input = ({ hasError, ...rest }) => {
-  const style = 'border rounded-lg w-full px-3 py-2 font-medium text-blue-600 outline-none focus:ring-1 focus:ring-blue-600' + (hasError && ' ring-red-600 ring-1');
+  const style = 'border rounded-sm ml-[1px] sm:rounded-lg w-full px-3 py-2 font-medium text-blue-600 outline-none focus:ring-1 focus:ring-blue-600' + (hasError && ' ring-red-600 ring-1');
   return <input className={style} {...rest} />
 }
 

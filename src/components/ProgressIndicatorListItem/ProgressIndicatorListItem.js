@@ -9,9 +9,9 @@ const ProgressIndicatorListItem = memo(({ step, label, active }) => {
   return (
     <div className="flex items-center gap-x-4">
       <div className={style}>{step}</div>
-      <div className="flex-grow">
+      <div className="flex-grow hidden sm:block">
         <div className="text-xs text-blue-200 uppercase">STEP {step}</div>
-        <div className="text-white font-medium uppercase">{label}</div>
+        <div className="text-white font-medium uppercase text-sm lg:text-base">{label}</div>
       </div>
     </div>
   )
