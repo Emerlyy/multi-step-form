@@ -1,12 +1,14 @@
+import { memo } from 'react';
 import './ToggleSwitch.css'
 
-const ToggleSwitch = ({ isCheked, handleCheck }) => {
+const ToggleSwitch = ({ isChecked, handleCheck }) => {
+
   return (
     <label className="switch">
-      <input type="checkbox" checked={isCheked} onChange={handleCheck} />
+      <input type="checkbox" checked={isChecked} onChange={handleCheck} />
       <span className="slider round"></span>
     </label>
   );
 }
 
-export default ToggleSwitch;
+export default memo(ToggleSwitch);

@@ -34,7 +34,7 @@ const Summary = ({ formData, onChangePlan }) => {
       </div>
       <div className="flex justify-between items-center p-5">
         <div className="text-sm text-gray-400">Total (per {isYearly ? 'year' : 'month'})</div>
-        <span className="text-base font-bold text-blue-500">+${isYearly ? total * 10 + '/yr' : total + '/mo'}</span>
+        <span className="text-base font-bold text-blue-500">${isYearly ? total * 10 + '/yr' : total + '/mo'}</span>
       </div>
     </div>
   );

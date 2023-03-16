@@ -1,17 +1,20 @@
+import { useCallback } from "react";
 import PlanDurationSwitcher from "../PlanDurationSwitcher/PlanDurationSwitcher";
 import PlanSelector from "../PlanSelector/PlanSelector"
 
 const SelectPlan = ({ formData, setFormData, plans }) => {
 
-  const toggleIsYearly = () => {
+  const toggleIsYearly = useCallback(() => {
     setFormData((formData) => ({
       ...formData,
       isYearly: !formData.isYearly
     }));
-  }
+  }, [setFormData])
 
   const handlePlanChange = (plan) => {
-    setFormData({ ...formData, plan });
+    if (formData.plan.name === plan.name)
+      return;
+    setFormData((formData) => ({ ...formData, plan }));
   }
 
   return (

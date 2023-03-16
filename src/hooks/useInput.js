@@ -1,4 +1,4 @@
-import {  useState } from "react";
+import { useCallback, useState } from "react";
 import { useValidation } from "./useValidation";
 
 export const useInput = (initialValue, validations) => {
@@ -8,13 +8,13 @@ export const useInput = (initialValue, validations) => {
 
   const valid = useValidation(value, validations);
 
-  const onChange = (e) => {
+  const onChange = useCallback((e) => {
     setValue(e.target.value);
-  }
+  }, [])
 
-  const onBlur = (e) => {
+  const onBlur = useCallback(() => {
     setDirty(true);
-  }
+  }, [])
 
   return {
     value,

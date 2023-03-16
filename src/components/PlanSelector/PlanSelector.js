@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import Card from '../Card/Card';
 
 const PlanSelector = ({ plans, activePlan, onPlanChange, isYearly }) => {
@@ -22,4 +23,4 @@ const PlanSelector = ({ plans, activePlan, onPlanChange, isYearly }) => {
   )
 }
 
-export default PlanSelector;
+export default memo(PlanSelector);

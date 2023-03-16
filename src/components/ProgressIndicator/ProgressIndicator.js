@@ -1,7 +1,7 @@
 import { memo } from "react";
 import ProgressIndicatorListItem from "../ProgressIndicatorListItem/ProgressIndicatorListItem";
 
-const ProgressIndicator = memo(({ steps, currentStep }) => {
+const ProgressIndicator = ({ steps, currentStep }) => {
   return (
     <div className="progress w-[274px] h-[568px] bg-cover bg-no-repeat px-8 py-10 rounded-xl">
       <ul className="flex flex-col gap-y-6">
@@ -13,6 +13,6 @@ const ProgressIndicator = memo(({ steps, currentStep }) => {
       </ul>
     </div>
   )
-})
+}
 
-export default ProgressIndicator;
+export default memo(ProgressIndicator);
