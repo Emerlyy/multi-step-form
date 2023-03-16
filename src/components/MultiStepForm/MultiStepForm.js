@@ -73,7 +73,7 @@ const MultiStepForm = () => {
   }
 
   return (
-    <div className="flex w-full max-w-[1000px] sm:min-h-[600px] sm:h-fit mx-auto align-top shadow-lg rounded-2xl mt-12 mb-14 sm:bg-white sm:p-4 pr-0">
+    <div className="flex w-full max-w-[1000px] sm:min-h-[600px] sm:h-fit mx-auto align-top shadow-lg rounded-2xl mt-12 mb-8 sm:bg-white sm:p-4 pr-0">
       <ProgressIndicator steps={steps} currentStep={Math.min(currentStep, 4)} />
       <div className="z-10 bg-white rounded-2xl flex flex-col py-8 px-6 md:px-12 lg:px-18 xl:px-20 flex-grow">
         {currentStep <= steps.length
@@ -83,7 +83,7 @@ const MultiStepForm = () => {
             <div className="flex-grow">
               {PageDisplay()}
             </div>
-            <div className="absolute bottom-0 left-0 w-full p-4 sm:static sm:w-auto sm:p-0 flex items-center mt-12 bg-white">
+            <div className="fixed bottom-0 left-0 w-full p-4 sm:static sm:w-auto sm:p-0 flex items-center sm:mt-12 bg-white">
               {currentStep > 1 && <span className="cursor-pointer text-gray-400 text-sm md:text-base font-medium transition-colors hover:text-blue-600" onClick={_prev}>Go Back</span>}
               <button
                 onClick={_next}
